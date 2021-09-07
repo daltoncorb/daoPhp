@@ -29,8 +29,8 @@
 
         public function dSelect($rawQuery, $params = array()){
             $fetc = $this->dQuery($rawQuery, $params);
-            $res = $fetc->fetchAll(PDO::FETCH_ASSOC);
-            return $res;
+            return $fetc->fetchAll(PDO::FETCH_ASSOC);
+             
         }
           
         
