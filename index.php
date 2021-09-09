@@ -7,9 +7,31 @@
 
     // echo json_encode($res);
 
-    $usuario = new Usuario();
-    $usuario->getUserById(4);
-    //echo $usuario->getUserLogin() . ' - ' . $$usuario->getUserPassword() . " - " . $usuario->getDtCadastro();
-    echo $usuario ;
+    //$usuario = new Usuario();
+    //retorna somente um usuário
+    //$usuario->getUserById(1);
+    // echo "<br>" . $usuario->getUserLogin() ;
+    // echo "<br>" . $usuario->getUserPassword() ;
+    // echo "<br>" . $usuario->getIdUsuario() ;
+    // echo "<br>" . $usuario->getDtCadastro() ;
+    //echo $usuario ;
+    
+    //$u = new Usuario();
+    //metodo e estatico;
+    //$resultado = Usuario::listaUsers();
+    //echo $resultado;
+
+    //echo "-------------searchlogin static--------------" ;
+    //$res = Usuario::searchLogin("ar");
+    //echo $res;
+
+    //ususario por senha e login sem ser estático
+    $u = new Usuario();
+    $res = $u->getUserByLoginAndPass('dalton', '123456');
+    //echo "<br>" . $u->getUserLogin() ;
+    //echo "<br>" . $u->getUserPassword() ;
+    //echo $u;
+    $res = $u->getUserByLoginAndPass('ricardo', '125635');
+    echo $u;
 
 ?>
