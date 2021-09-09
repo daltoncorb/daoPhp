@@ -27,11 +27,19 @@
 
     //ususario por senha e login sem ser estático
     $u = new Usuario();
-    $res = $u->getUserByLoginAndPass('dalton', '123456');
+    //$res = $u->getUserByLoginAndPass('dalton', '123456');
     //echo "<br>" . $u->getUserLogin() ;
     //echo "<br>" . $u->getUserPassword() ;
     //echo $u;
-    $res = $u->getUserByLoginAndPass('ricardo', '125635');
-    echo $u;
+    //$res = $u->getUserByLoginAndPass('ricardo', '225635');
+
+    $u->setUserLogin("bastard");
+    $u->setUserPassword("332255");
+    $r = $u->insertUser();
+    echo $r;
+
+    $u->updateUser("newBastard", "325689", 10);
+
+    $u->deleteUser(12);
 
 ?>
